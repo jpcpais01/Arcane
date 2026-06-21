@@ -113,6 +113,8 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
         <CardArt
           gradient={product.gradient}
           emblem={product.emblem}
+          image={product.image}
+          alt={`${product.name} — ${product.set}`}
           className="transition-transform duration-500 group-hover:scale-[1.03]"
         />
         {product.badge && (

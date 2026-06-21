@@ -12,6 +12,7 @@ import {
   Twitch,
   Youtube,
 } from "lucide-react";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 const shopLinks = [
   { label: "Pokémon", href: "#catalogo" },
@@ -121,9 +122,7 @@ export function Footer() {
           {/* Marca */}
           <div>
             <a href="#topo" className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-arcane-deep to-ether-deep shadow-glow">
-                <Sparkles size={18} className="text-white" />
-              </span>
+              <BrandMark />
               <span className="font-display text-lg font-bold text-white">
                 Arcane
               </span>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Star, Zap } from "lucide-react";
 import { CardArt } from "@/components/ui/CardArt";
+import { SmartImage } from "@/components/ui/SmartImage";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 26 },
@@ -25,6 +26,17 @@ export function Hero() {
       id="topo"
       className="relative mx-auto max-w-6xl px-4 pb-16 pt-32 sm:px-6 sm:pt-36 lg:pb-24 lg:pt-44"
     >
+      {/* Fundo atmosférico full-bleed (opcional) — gradiente ambiente por baixo */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[680px] w-screen -translate-x-1/2 overflow-hidden"
+      >
+        <SmartImage
+          src="/images/hero/hero-bg.jpg"
+          className="opacity-25 mask-fade-b"
+        />
+      </div>
+
       <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
         {/* Coluna de texto */}
         <div className="text-center lg:text-left">
@@ -131,6 +143,8 @@ export function Hero() {
                 gradient="linear-gradient(150deg, #7c3aed 0%, #db2777 55%, #0d9488 100%)"
                 emblem="✦"
                 label="Arcane · Mythic"
+                image="/images/hero/card-arcane.png"
+                alt="Carta lendária da Arcane"
                 className="shadow-glow"
               />
             </div>
@@ -142,6 +156,8 @@ export function Hero() {
               <CardArt
                 gradient="linear-gradient(150deg, #f59e0b 0%, #ef4444 60%, #1e1b4b 100%)"
                 emblem="🔥"
+                image="/images/cards/char-base-4.png"
+                alt="Charizard"
                 holo={false}
               />
             </div>
@@ -153,6 +169,8 @@ export function Hero() {
               <CardArt
                 gradient="linear-gradient(150deg, #0ea5e9 0%, #4338ca 60%, #1e1b4b 100%)"
                 emblem="🐉"
+                image="/images/cards/blue-eyes.png"
+                alt="Blue-Eyes White Dragon"
                 holo={false}
               />
             </div>
@@ -164,6 +182,8 @@ export function Hero() {
               <CardArt
                 gradient="linear-gradient(150deg, #22d3ee 0%, #6366f1 60%, #1e1b4b 100%)"
                 emblem="❉"
+                image="/images/cards/elsa-lorcana.png"
+                alt="Elsa — Rainha das Neves"
                 holo={false}
               />
             </div>

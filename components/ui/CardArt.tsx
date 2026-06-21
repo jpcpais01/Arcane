@@ -1,4 +1,5 @@
 import { clsx } from "@/lib/clsx";
+import { SmartImage } from "@/components/ui/SmartImage";
 
 type CardArtProps = {
   gradient: string;
@@ -6,11 +7,16 @@ type CardArtProps = {
   label?: string;
   className?: string;
   holo?: boolean;
+  /** Caminho da imagem da carta (opcional). Sobrepõe-se ao gradiente. */
+  image?: string;
+  /** Texto alternativo da imagem. */
+  alt?: string;
 };
 
 /**
- * Representação estilizada de uma carta de TCG composta apenas por CSS.
- * Sem imagens externas — garante zero links partidos e carregamento instantâneo.
+ * Carta de TCG. Por defeito é composta apenas por CSS (gradiente + emblema),
+ * mas aceita uma `image` que se sobrepõe ao gradiente. Se a imagem faltar,
+ * o gradiente mantém-se — nunca há links partidos.
  */
 export function CardArt({
   gradient,
@@ -18,6 +24,8 @@ export function CardArt({
   label,
   className,
   holo = true,
+  image,
+  alt,
 }: CardArtProps) {
   return (
     <div
@@ -27,6 +35,16 @@ export function CardArt({
       )}
       style={{ background: gradient }}
     >
+      {/* Emblema central (fallback quando não há imagem) */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="text-5xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-6xl">
+          {emblem}
+        </span>
+      </div>
+
+      {/* Imagem da carta (sobrepõe-se ao gradiente + emblema) */}
+      {image && <SmartImage src={image} alt={alt} />}
+
       {/* Brilho holográfico */}
       {holo && (
         <div
@@ -51,13 +69,6 @@ export function CardArt({
 
       {/* Moldura interior */}
       <div className="absolute inset-2 rounded-xl border border-white/20" />
-
-      {/* Emblema central */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-5xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-6xl">
-          {emblem}
-        </span>
-      </div>
 
       {/* Etiqueta inferior */}
       {label && (

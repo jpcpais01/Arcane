@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, Search, ShoppingBag, Sparkles, X } from "lucide-react";
+import { Menu, Search, ShoppingBag, X } from "lucide-react";
 import { navLinks } from "@/components/data";
 import { useCart } from "@/components/cart/CartContext";
+import { BrandMark } from "@/components/ui/BrandMark";
 import { clsx } from "@/lib/clsx";
 
 export function Navbar() {
@@ -42,10 +43,7 @@ export function Navbar() {
           className="group flex shrink-0 items-center gap-2.5 pl-1"
           aria-label="Arcane — início"
         >
-          <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-arcane-deep to-ether-deep shadow-glow">
-            <Sparkles className="text-white" size={18} />
-            <span className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/20" />
-          </span>
+          <BrandMark />
           <span className="font-display text-lg font-bold tracking-tight text-white">
             Arcane
           </span>

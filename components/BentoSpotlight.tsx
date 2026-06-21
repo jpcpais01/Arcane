@@ -3,6 +3,7 @@
 import { ArrowUpRight, Layers } from "lucide-react";
 import { featuredSets } from "@/components/data";
 import { Reveal } from "@/components/ui/Reveal";
+import { SmartImage } from "@/components/ui/SmartImage";
 import { clsx } from "@/lib/clsx";
 
 const spanByIndex = [
@@ -43,6 +44,11 @@ export function BentoSpotlight() {
               className="relative flex h-full w-full flex-col justify-end overflow-hidden rounded-3xl border border-white/10 p-5 transition-all duration-500 hover:-translate-y-1.5"
               style={{ background: set.gradient }}
             >
+              {/* Imagem de fundo (sobrepõe-se ao gradiente; cai para o gradiente se faltar) */}
+              <SmartImage
+                src={set.image}
+                className="transition-transform duration-700 group-hover:scale-105"
+              />
               {/* Camada escura para legibilidade */}
               <div
                 aria-hidden

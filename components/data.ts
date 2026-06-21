@@ -8,10 +8,11 @@ export type FeaturedSet = {
   id: string;
   name: string;
   tagline: string;
-  emblem: string; // símbolo unicode para a arte
+  emblem: string; // símbolo unicode para a arte (fallback)
   items: string; // ex.: "1.240 cartas"
   accent: string; // cor de destaque (texto/glow)
-  gradient: string; // gradiente CSS para a arte
+  gradient: string; // gradiente CSS para a arte (fallback)
+  image: string; // imagem de fundo do mosaico (sobrepõe-se ao gradiente)
   size: "lg" | "md" | "sm";
 };
 
@@ -25,6 +26,7 @@ export const featuredSets: FeaturedSet[] = [
     accent: "#fbbf24",
     gradient:
       "linear-gradient(135deg, #f59e0b 0%, #ef4444 45%, #7c3aed 100%)",
+    image: "/images/sets/pokemon.png",
     size: "lg",
   },
   {
@@ -36,6 +38,7 @@ export const featuredSets: FeaturedSet[] = [
     accent: "#a78bfa",
     gradient:
       "linear-gradient(135deg, #6d28d9 0%, #2563eb 50%, #0d9488 100%)",
+    image: "/images/sets/magic.png",
     size: "md",
   },
   {
@@ -47,6 +50,7 @@ export const featuredSets: FeaturedSet[] = [
     accent: "#f472b6",
     gradient:
       "linear-gradient(135deg, #be123c 0%, #9333ea 55%, #1e1b4b 100%)",
+    image: "/images/sets/yugioh.png",
     size: "md",
   },
   {
@@ -58,6 +62,7 @@ export const featuredSets: FeaturedSet[] = [
     accent: "#38bdf8",
     gradient:
       "linear-gradient(135deg, #0ea5e9 0%, #6366f1 60%, #db2777 100%)",
+    image: "/images/sets/onepiece.png",
     size: "sm",
   },
   {
@@ -69,6 +74,7 @@ export const featuredSets: FeaturedSet[] = [
     accent: "#5eead4",
     gradient:
       "linear-gradient(135deg, #0d9488 0%, #6d28d9 65%, #1e1b4b 100%)",
+    image: "/images/sets/lorcana.png",
     size: "sm",
   },
 ];
@@ -83,8 +89,9 @@ export type Product = {
   rarity: string;
   condition: Condition;
   price: number;
-  gradient: string;
-  emblem: string;
+  gradient: string; // fallback enquanto a imagem não existe
+  emblem: string; // fallback enquanto a imagem não existe
+  image: string; // arte da carta (sobrepõe-se ao gradiente)
   badge?: string;
 };
 
@@ -99,6 +106,7 @@ export const products: Product[] = [
     price: 489.9,
     gradient: "linear-gradient(150deg, #f97316 0%, #b91c1c 60%, #1e1b4b 100%)",
     emblem: "🔥",
+    image: "/images/cards/char-base-4.png",
     badge: "Procurada",
   },
   {
@@ -111,6 +119,7 @@ export const products: Product[] = [
     price: 12500,
     gradient: "linear-gradient(150deg, #111827 0%, #4c1d95 60%, #0d9488 100%)",
     emblem: "✦",
+    image: "/images/cards/black-lotus.png",
     badge: "Vault",
   },
   {
@@ -123,6 +132,7 @@ export const products: Product[] = [
     price: 159.0,
     gradient: "linear-gradient(150deg, #0ea5e9 0%, #4338ca 60%, #1e1b4b 100%)",
     emblem: "🐉",
+    image: "/images/cards/blue-eyes.png",
   },
   {
     id: "luffy-leader",
@@ -134,6 +144,7 @@ export const products: Product[] = [
     price: 42.5,
     gradient: "linear-gradient(150deg, #ef4444 0%, #db2777 55%, #4c1d95 100%)",
     emblem: "☠",
+    image: "/images/cards/luffy-leader.png",
     badge: "Novidade",
   },
   {
@@ -146,6 +157,7 @@ export const products: Product[] = [
     price: 8990,
     gradient: "linear-gradient(150deg, #facc15 0%, #f97316 55%, #7c3aed 100%)",
     emblem: "⚡",
+    image: "/images/cards/pikachu-illustrator.png",
     badge: "Graded 9",
   },
   {
@@ -158,6 +170,7 @@ export const products: Product[] = [
     price: 219.0,
     gradient: "linear-gradient(150deg, #22d3ee 0%, #6366f1 55%, #1e1b4b 100%)",
     emblem: "❉",
+    image: "/images/cards/elsa-lorcana.png",
   },
   {
     id: "jace-mtg",
@@ -169,6 +182,7 @@ export const products: Product[] = [
     price: 74.9,
     gradient: "linear-gradient(150deg, #2563eb 0%, #4c1d95 55%, #0f172a 100%)",
     emblem: "✧",
+    image: "/images/cards/jace-mtg.png",
   },
   {
     id: "umbreon-vmax",
@@ -180,6 +194,7 @@ export const products: Product[] = [
     price: 549.0,
     gradient: "linear-gradient(150deg, #6d28d9 0%, #1e293b 55%, #0d9488 100%)",
     emblem: "🌙",
+    image: "/images/cards/umbreon-vmax.png",
     badge: "Alt Art",
   },
 ];
