@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s · Arcane",
   },
   description:
-    "A loja definitiva de Trading Card Games em Portugal. Cartas individuais, coleções seladas, torneios e uma comunidade que vive a magia do jogo. Envios rápidos para todo o país.",
+    "A loja online de Trading Card Games em Portugal. Cartas individuais autenticadas, coleções seladas e acessórios. Compramos também a tua coleção. Envios rápidos para todo o país.",
   keywords: [
     "TCG",
     "Trading Card Games",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "Arcane — O Santuário dos Trading Card Games",
     description:
-      "Cartas individuais, coleções seladas, torneios e uma comunidade que vive a magia do jogo.",
+      "Loja online de cartas individuais autenticadas e coleções seladas. Envios rápidos para todo o país.",
     siteName: "Arcane",
   },
   twitter: {

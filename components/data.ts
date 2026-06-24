@@ -199,78 +199,9 @@ export const products: Product[] = [
   },
 ];
 
-export type GameEvent = {
-  id: string;
-  title: string;
-  game: string;
-  format: string;
-  date: string; // dia
-  weekday: string;
-  time: string;
-  fee: string;
-  slotsLeft: number;
-  slotsTotal: number;
-  accent: string;
-};
-
-export const events: GameEvent[] = [
-  {
-    id: "mtg-commander",
-    title: "Noite de Commander",
-    game: "Magic: The Gathering",
-    format: "Commander · Casual",
-    date: "26 JUN",
-    weekday: "Sexta-feira",
-    time: "20h30",
-    fee: "Entrada livre",
-    slotsLeft: 6,
-    slotsTotal: 24,
-    accent: "#a78bfa",
-  },
-  {
-    id: "pkm-league",
-    title: "Liga Pokémon Arcane",
-    game: "Pokémon TCG",
-    format: "Standard · Ranqueado",
-    date: "28 JUN",
-    weekday: "Domingo",
-    time: "15h00",
-    fee: "5 €",
-    slotsLeft: 3,
-    slotsTotal: 16,
-    accent: "#fbbf24",
-  },
-  {
-    id: "op-prerelease",
-    title: "Pré-lançamento OP-09",
-    game: "One Piece Card Game",
-    format: "Sealed · Limitado",
-    date: "04 JUL",
-    weekday: "Sábado",
-    time: "14h00",
-    fee: "25 €",
-    slotsLeft: 11,
-    slotsTotal: 32,
-    accent: "#38bdf8",
-  },
-  {
-    id: "ygo-locals",
-    title: "Torneio Semanal",
-    game: "Yu-Gi-Oh!",
-    format: "Advanced · Suíço",
-    date: "02 JUL",
-    weekday: "Quinta-feira",
-    time: "19h00",
-    fee: "3 €",
-    slotsLeft: 8,
-    slotsTotal: 20,
-    accent: "#f472b6",
-  },
-];
-
 export const navLinks = [
   { label: "Catálogo", href: "#catalogo" },
   { label: "Cartas Individuais", href: "#stock" },
-  { label: "Eventos", href: "#eventos" },
-  { label: "A Guilda", href: "#guilda" },
+  { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Vender Cartas", href: "#vender" },
 ];

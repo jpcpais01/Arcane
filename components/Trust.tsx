@@ -1,4 +1,4 @@
-import { BadgeCheck, HeartHandshake, ShieldCheck, Truck } from "lucide-react";
+import { BadgeCheck, PackageCheck, ShieldCheck, Truck } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const values = [
@@ -21,9 +21,9 @@ const values = [
     accent: "from-fuchsia-glow to-arcane",
   },
   {
-    icon: HeartHandshake,
-    title: "Comunidade em primeiro",
-    desc: "Antes de loja, somos jogadores. O teu hobby é a nossa missão.",
+    icon: PackageCheck,
+    title: "Embalagem à prova de coleção",
+    desc: "Sleeve, toploader e envelope rígido em todas as encomendas. As tuas cartas chegam impecáveis.",
     accent: "from-emerald-glow to-ether",
   },
 ];

@@ -17,7 +17,7 @@ const fadeUp = {
 const stats = [
   { value: "14.000+", label: "Cartas em stock" },
   { value: "48h", label: "Envio para todo o país" },
-  { value: "4.9★", label: "Avaliação da comunidade" },
+  { value: "4.9★", label: "Avaliação dos clientes" },
 ];
 
 export function Hero() {
@@ -72,9 +72,9 @@ export function Hero() {
             animate="visible"
             className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-silver-muted text-pretty sm:text-lg lg:mx-0"
           >
-            Bem-vindo à Arcane — a loja onde Pokémon, Magic, Yu-Gi-Oh! e One
-            Piece ganham vida. Cartas individuais autenticadas, coleções
-            seladas e uma comunidade que vive cada duelo.
+            Bem-vindo à Arcane — a tua loja online de Pokémon, Magic,
+            Yu-Gi-Oh! e One Piece. Cartas individuais autenticadas e coleções
+            seladas, entregues à tua porta em 48 horas.
           </motion.p>
 
           <motion.div

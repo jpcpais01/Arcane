@@ -1,6 +1,6 @@
-# Arcane — Loja de Trading Card Games
+# Arcane — Loja Online de Trading Card Games
 
-Website moderno e responsivo para uma loja de TCG (Pokémon, Magic, Yu-Gi-Oh!, One Piece e mais), com estética _"mystical geek"_, modo escuro, glassmorphism e micro-interações. Todo o conteúdo em **Português Europeu (pt-PT)**.
+Website moderno e responsivo para uma loja online de TCG (Pokémon, Magic, Yu-Gi-Oh!, One Piece e mais), com estética _"mystical geek"_, modo escuro, glassmorphism e micro-interações. Todo o conteúdo em **Português Europeu (pt-PT)**.
 
 Construído com **Next.js 14 (App Router)**, **Tailwind CSS**, **Framer Motion** e **lucide-react**. Otimizado para deploy na **Vercel**.
 
@@ -12,7 +12,7 @@ Construído com **Next.js 14 (App Router)**, **Tailwind CSS**, **Framer Motion**
 - **Hero** com cartas flutuantes e geometria mística (apenas CSS — zero imagens externas).
 - **Bento grid** assimétrico para coleções em destaque.
 - **Stock ao vivo** com filtros por jogo e botão "Adicionar" ligado a um carrinho real (com drawer animado).
-- **Eventos da comunidade** com badges de data, taxa e vagas.
+- **Como funciona** — fluxo de compra online em 3 passos + CTA de compra de coleções (buylist).
 - **Carrinho** completo: quantidades, subtotal, envio grátis acima de 50 €, total.
 - Acessibilidade: `lang="pt-PT"`, `aria-labels`, suporte a `prefers-reduced-motion`.
 - Sem dependência de imagens externas → **nenhum link partido**, carregamento instantâneo.
@@ -54,10 +54,10 @@ components/
   Hero.tsx          # Secção de entrada + cartas flutuantes
   BentoSpotlight.tsx# Grelha bento de coleções
   LiveStock.tsx     # Cartas individuais + filtros
-  CommunityEvents.tsx# Eventos e torneios
+  HowItWorks.tsx    # Fluxo de compra online + buylist
   Trust.tsx         # Valores da loja
   Footer.tsx        # Newsletter + rodapé
-  data.ts           # Conteúdo (coleções, produtos, eventos)
+  data.ts           # Conteúdo (coleções, produtos)
   cart/             # Contexto e drawer do carrinho
   ui/               # CardArt + Reveal (componentes reutilizáveis)
 lib/
@@ -72,4 +72,4 @@ lib/
 
 ---
 
-Feito com 🔮 para a comunidade de colecionadores.
+Feito com 🔮 para colecionadores.

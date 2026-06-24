@@ -7,8 +7,8 @@ import {
   Clock,
   Instagram,
   Mail,
-  MapPin,
   Sparkles,
+  Truck,
   Twitch,
   Youtube,
 } from "lucide-react";
@@ -19,6 +19,7 @@ const shopLinks = [
   { label: "Magic: The Gathering", href: "#catalogo" },
   { label: "Yu-Gi-Oh!", href: "#catalogo" },
   { label: "One Piece Card Game", href: "#catalogo" },
+  { label: "Disney Lorcana", href: "#catalogo" },
   { label: "Acessórios & Sleeves", href: "#catalogo" },
 ];
 
@@ -26,6 +27,7 @@ const helpLinks = [
   { label: "Envios e devoluções", href: "#" },
   { label: "Estado das encomendas", href: "#" },
   { label: "Autenticação de cartas", href: "#" },
+  { label: "Vender cartas", href: "#vender" },
   { label: "Contacto", href: "#" },
   { label: "Perguntas frequentes", href: "#" },
 ];
@@ -72,7 +74,7 @@ export function Footer() {
               </h2>
               <p className="mt-3 max-w-md text-silver-muted text-pretty">
                 Recebe em primeira mão os novos lançamentos, restocks e
-                convites para eventos exclusivos. Sem spam, prometido.
+                promoções exclusivas. Sem spam, prometido.
               </p>
             </div>
 
@@ -179,24 +181,35 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* Loja física */}
+          {/* Apoio ao cliente */}
           <div>
-            <h3 className="text-sm font-semibold text-white">Visita-nos</h3>
+            <h3 className="text-sm font-semibold text-white">Apoio ao cliente</h3>
             <ul className="mt-4 space-y-3.5 text-sm text-silver-muted">
               <li className="flex gap-3">
-                <MapPin size={17} className="mt-0.5 shrink-0 text-arcane-soft" />
-                <span>
-                  Rua dos Encantados, 42
+                <Mail size={17} className="mt-0.5 shrink-0 text-arcane-soft" />
+                <a
+                  href="mailto:ola@arcane.pt"
+                  className="transition hover:text-white"
+                >
+                  ola@arcane.pt
                   <br />
-                  1200-109 Lisboa, Portugal
-                </span>
+                  <span className="text-silver-faint">Resposta em até 24h</span>
+                </a>
               </li>
               <li className="flex gap-3">
                 <Clock size={17} className="mt-0.5 shrink-0 text-ether-soft" />
                 <span>
-                  Seg — Sáb · 10h às 20h
+                  Apoio · Seg a Sáb
                   <br />
-                  Domingo · 14h às 19h
+                  10h às 19h
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <Truck size={17} className="mt-0.5 shrink-0 text-emerald-glow" />
+                <span>
+                  Loja 100% online
+                  <br />
+                  Envios para todo o país
                 </span>
               </li>
             </ul>
